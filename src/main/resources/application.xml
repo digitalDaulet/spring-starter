@@ -6,15 +6,15 @@
 
     <!-- Define your beans here -->
     <bean id="pool1" name="p1, p2, p3" class="com.daulet.spring.database.pool.ConnectionPool">
-        <constructor-arg index="0" value="postgres"/>
-        <constructor-arg index="1" value="10"/>
-        <constructor-arg index="2">
+        <constructor-arg index="0" type="java.lang.String" value="postgres"/>
+        <constructor-arg index="1" type="java.lang.Integer" value="10"/>
+        <constructor-arg type="java.util.List" index="2">
             <list>
                 <value>--arg1=value1</value>
                 <value>--arg2=value2</value>
             </list>
         </constructor-arg>
-        <constructor-arg index="3">
+        <constructor-arg type="java.util.Map" index="3">
             <map>
                 <entry key="url" value="postgresUrl"/>
                 <entry key="password" value="123"/>

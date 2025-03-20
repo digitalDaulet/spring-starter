@@ -28,6 +28,10 @@
         </constructor-arg>
     </bean>
 
+    <bean id="companyRepository" class="com.daulet.spring.database.repository.CompanyRepository">
+        <constructor-arg ref="p1"/>
+    </bean>
+
 <!--    <bean id="pool2" name="p4" class="com.daulet.spring.database.pool.ConnectionPool"/>-->
 
 </beans>

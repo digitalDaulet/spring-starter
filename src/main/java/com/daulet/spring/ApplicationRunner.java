@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
-        // passed 7th video explanation
+        // 8th video explanation: property injection
         var context = new ClassPathXmlApplicationContext("application.xml");
         var connectionPool = context.getBean("pool1", ConnectionPool.class);
         System.out.println(connectionPool);

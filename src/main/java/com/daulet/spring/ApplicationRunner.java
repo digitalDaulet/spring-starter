@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
+        // passed 7th video explanation
         var context = new ClassPathXmlApplicationContext("application.xml");
         var connectionPool = context.getBean("pool1", ConnectionPool.class);
         System.out.println(connectionPool);

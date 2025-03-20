@@ -5,6 +5,10 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define your beans here -->
+    <bean id="driver" class="java.lang.String">
+        <constructor-arg type="java.lang.String" value="PostgresDriver"/>
+    </bean>
+
     <bean id="pool1" name="p1, p2, p3" class="com.daulet.spring.database.pool.ConnectionPool">
         <constructor-arg index="0" type="java.lang.String" value="postgres"/>
         <constructor-arg index="1" type="java.lang.Integer" value="10"/>

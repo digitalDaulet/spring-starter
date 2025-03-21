@@ -6,8 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
-        // passed 16th video explanation: custom bean post processor(bpp)
+        // skipped 17th video explanation: custom bean post processor(bpp)
         // omg
+        // its too hard to find out what's going on
         try (var context = new ClassPathXmlApplicationContext("application.xml")) {
             var connectionPool = context.getBean("pool1", ConnectionPool.class);
             System.out.println(connectionPool);

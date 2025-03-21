@@ -15,7 +15,7 @@
 <!--    </bean>-->
 
     <bean id="driver" class="java.lang.String">
-        <constructor-arg index="0" type="java.lang.String" value="PostgresDriver"/>
+        <constructor-arg index="0" type="java.lang.String" value="${db.driver}"/>
     </bean>
 
     <bean id="pool1" name="p1, p2, p3" class="com.daulet.spring.database.pool.ConnectionPool"
@@ -38,6 +38,10 @@
                 <entry key="url" value="${db.url}"/>
                 <entry key="password" value="${db.password}"/>
                 <entry key="driver" value-ref="driver"/>
+                <entry key="test" value="#{driver.length() > 10}"/>
+                <entry key="test1" value="#{driver.length() > T(Math).random() * 10}"/>
+                <entry key="hosts" value="#{'${db.hosts}'.split(',')}"/>
+                <entry key="currentUser" value="#{systemProperties['user.name']}"/>
             </map>
         </property>
     </bean>

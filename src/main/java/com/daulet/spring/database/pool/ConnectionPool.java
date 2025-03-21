@@ -31,4 +31,8 @@ public class ConnectionPool implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         System.out.println("Initializing connection pool with afterPropertiesSet method...");
     }
+
+    private void destroy() {
+        System.out.println("Clean connection pool with destroy method...");
+    }
 }

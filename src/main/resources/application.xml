@@ -10,6 +10,8 @@
     <!-- Define your beans here -->
     <context:property-placeholder location="classpath:application.properties"/>
 
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
 <!--    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
 <!--        <property name="locations" value="classpath:application.properties"/>-->
 <!--    </bean>-->
@@ -18,9 +20,7 @@
         <constructor-arg index="0" type="java.lang.String" value="${db.driver}"/>
     </bean>
 
-    <bean id="pool1" name="p1, p2, p3" class="com.daulet.spring.database.pool.ConnectionPool"
-          init-method="init"
-          destroy-method="destroy">
+    <bean id="pool1" name="p1, p2, p3" class="com.daulet.spring.database.pool.ConnectionPool">
         <constructor-arg name="username" type="java.lang.String" value="${db.username}"/>
         <constructor-arg name="poolSize" type="java.lang.Integer" value="${db.pool.size}"/>
         <constructor-arg name="args" type="java.util.List">

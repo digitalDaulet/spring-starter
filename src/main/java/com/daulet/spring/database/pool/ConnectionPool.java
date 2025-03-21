@@ -1,6 +1,7 @@
 package com.daulet.spring.database.pool;
 
-import org.springframework.beans.factory.DisposableBean;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.InitializingBean;
 
 import java.util.List;
@@ -23,6 +24,7 @@ public class ConnectionPool implements InitializingBean {
         this.properties = properties;
     }
 
+    @PostConstruct
     private void init() {
         System.out.println("Initializing connection pool with init method...");
     }
@@ -32,6 +34,7 @@ public class ConnectionPool implements InitializingBean {
         System.out.println("Initializing connection pool with afterPropertiesSet method...");
     }
 
+    @PreDestroy
     private void destroy() {
         System.out.println("Clean connection pool with destroy method...");
     }

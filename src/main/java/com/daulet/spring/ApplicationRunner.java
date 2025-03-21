@@ -6,7 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
-        // passed 11th video explanation: injection from properties files
+        // 12th video explanation: bean factory post processor (bfpp)
+        // GENIUS WHO MADE IT
         try (var context = new ClassPathXmlApplicationContext("application.xml")) {
             var connectionPool = context.getBean("pool1", ConnectionPool.class);
             System.out.println(connectionPool);

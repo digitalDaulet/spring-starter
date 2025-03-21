@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
-        // 10th video explanation: lifecyle, callbacks
+        // passsed 10th video explanation: lifecyle, callbacks
         try (var context = new ClassPathXmlApplicationContext("application.xml")) {
             var connectionPool = context.getBean("pool1", ConnectionPool.class);
             System.out.println(connectionPool);

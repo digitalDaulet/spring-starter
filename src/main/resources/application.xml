@@ -5,6 +5,10 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define your beans here -->
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="locations" value="classpath:application.properties"/>
+    </bean>
+
     <bean id="driver" class="java.lang.String">
         <constructor-arg index="0" type="java.lang.String" value="PostgresDriver"/>
     </bean>
